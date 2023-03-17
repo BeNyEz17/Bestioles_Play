@@ -2,29 +2,30 @@ package fr.pgah.bestioles;
 
 import java.awt.*;
 
-public class ChatNinja extends Bestiole {
+public class ChatSuperieur extends Bestiole{
 
     java.util.Random alea = new java.util.Random(System.currentTimeMillis());
-    boolean CHAT = false;
+    boolean ChatSuperieur = false;
 
-    public ChatNinja() {
+    public ChatSuperieur() {
 
     }
 
     public Action getAction(BestioleInfo info) {
 
         if (info.getEnFace() == Voisin.AUTRE) {
-            CHAT = true;
-            return Action.INFECTER;  
+            ChatSuperieur = true;
+            return Action.INFECTER;
         } else if (info.getADroite() == Voisin.AUTRE) {
-            return Action.INFECTER;
-        }else if (info.getADroite() == Voisin.AUTRE) {
-            return Action.DROITE;
-        }  else if (info.getAGauche() == Voisin.AUTRE) {
-            return Action.INFECTER;
-        }else if (info.getAGauche() == Voisin.AUTRE) {
             return Action.GAUCHE;
-        }  else {
+        } else if (info.getAGauche() == Voisin.AUTRE) {
+            return Action.SAUTER;
+        } else if (info.getADroite() == Voisin.AUTRE) {
+            return Action.DROITE;
+        } else if (info.getADroite() == Voisin.AUTRE) {
+            return Action.SAUTER;
+        }
+         else {
             return Action.SAUTER;
         }
     }
@@ -36,10 +37,10 @@ public class ChatNinja extends Bestiole {
     }
 
     public String toString() {
-        if (CHAT == true) {
-            return "xxx";
+        if (ChatSuperieur == true) {
+            return "CATSUP";
         } else {
-            return "yyy";
+            return "SUP";
         }
     }
 

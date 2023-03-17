@@ -18,7 +18,7 @@ public class BestiolesMain {
         frame.add(nb, TigreBlanc.class);
         frame.add(nb, Yeti.class);
         frame.add(nb, ChatNinja.class);
-
+        frame.add(nb, ChatSuperieur.class);
         frame.add(nb, Crocodile.class);
         frame.add(nb, Plancton.class);
 
