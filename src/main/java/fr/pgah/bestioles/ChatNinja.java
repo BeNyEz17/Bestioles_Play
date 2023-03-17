@@ -17,11 +17,7 @@ public class ChatNinja extends Bestiole {
             CHAT = true;
             return Action.INFECTER;  
         } else if (info.getADroite() == Voisin.AUTRE) {
-            return Action.INFECTER;
-        }else if (info.getADroite() == Voisin.AUTRE) {
             return Action.DROITE;
-        }  else if (info.getAGauche() == Voisin.AUTRE) {
-            return Action.INFECTER;
         }else if (info.getAGauche() == Voisin.AUTRE) {
             return Action.GAUCHE;
         }  else {

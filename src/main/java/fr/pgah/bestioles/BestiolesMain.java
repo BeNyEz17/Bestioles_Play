@@ -7,9 +7,9 @@ package fr.pgah.bestioles;
 
 public class BestiolesMain {
 
-    public static int nb = 50; 
+    public static int nb = 100; 
     public static void main(String[] args) {
-        BestioleFrame frame = new BestioleFrame(60, 40);
+        BestioleFrame frame = new BestioleFrame(400, 400);
 
         // décommentez chacune de ces lignes au fur et à mesure
         // que les classes sont complétées

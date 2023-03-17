@@ -15,17 +15,20 @@ public class ChatSuperieur extends Bestiole{
 
         if (info.getEnFace() == Voisin.AUTRE) {
             ChatSuperieur = true;
-            return Action.INFECTER;
-        } else if (info.getADroite() == Voisin.AUTRE) {
-            return Action.GAUCHE;
-        } else if (info.getAGauche() == Voisin.AUTRE) {
-            return Action.SAUTER;
+            return Action.INFECTER;  
         } else if (info.getADroite() == Voisin.AUTRE) {
             return Action.DROITE;
-        } else if (info.getADroite() == Voisin.AUTRE) {
-            return Action.SAUTER;
-        }
-         else {
+        }else if (info.getADroite() == Voisin.AUTRE) {
+            return Action.INFECTER;
+        }else if (info.getAGauche() == Voisin.AUTRE) {
+            return Action.GAUCHE;
+        } else if (info.getAGauche() == Voisin.AUTRE) {
+            return Action.INFECTER;
+        } else if (info.getEnFace() == Voisin.MEME) {
+            return Action.INFECTER;
+        } else if (info.getDerriere() == Voisin.MEME) {
+            return Action.INFECTER;
+        }  else {
             return Action.SAUTER;
         }
     }
@@ -38,9 +41,9 @@ public class ChatSuperieur extends Bestiole{
 
     public String toString() {
         if (ChatSuperieur == true) {
-            return "CATSUP";
+            return "UwU";
         } else {
-            return "SUP";
+            return "U";
         }
     }
 
